@@ -15,7 +15,7 @@
 - Lucro       : num  385 75.9 28.7 27.5 218.2 ...
 - MargemLucro : num  20.4 20.1 13.6 18.1 24 ...
 ## > cor(dados)
-................Unidades     PrecoUN        Desc VendasBrutas   InvestMKT
+- ................Unidades     PrecoUN        Desc VendasBrutas   InvestMKT
 - Unidades      1.00000000 -0.03975714  0.44567732    0.8390871  0.60449686
 - PrecoUN      -0.03975714  1.00000000 -0.03841668    0.3584145  0.39693513
 - Desc          0.44567732 -0.03841668  1.00000000    0.3755233  0.33436343
@@ -26,7 +26,7 @@
 - ReceitaLiq    0.83105912  0.36924789  0.32507046    0.9965948  0.76803096
 - Lucro         0.79734438  0.24698334  0.28520150    0.8969998  0.51475603
 - MargemLucro   0.36503367 -0.09746546  0.13714648    0.2813321 -0.04315004
-.............CustoProdt CustLogistic ReceitaLiq     Lucro MargemLucro
+- .............CustoProdt CustLogistic ReceitaLiq     Lucro MargemLucro
 - Unidades      0.8134175    0.7282636  0.8310591 0.7973444  0.36503367
 - PrecoUN       0.3752622    0.4702374  0.3692479 0.2469833 -0.09746546
 - Desc          0.3179461    0.2439294  0.3250705 0.2852015  0.13714648
@@ -43,7 +43,7 @@
 Start:  AIC=-323631.6
 ## Lucro ~ Unidades + PrecoUN + Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq + MargemLucro
 
-...............Df Sum of Sq      RSS     AIC
+- ...............Df Sum of Sq      RSS     AIC
 - PrecoUN       1         0        0 -325228
 - MargemLucro   1         0        0 -323633
 - <none>                             0 -323632
@@ -58,7 +58,7 @@ Start:  AIC=-323631.6
 Step:  AIC=-325228.2
 ## Lucro ~ Unidades + Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq + MargemLucro
 
-...............Df Sum of Sq      RSS     AIC
+- ...............Df Sum of Sq      RSS     AIC
 - Unidades      1         0        0 -326629
 - MargemLucro   1         0        0 -325230
 - <none>                             0 -325228
@@ -72,7 +72,7 @@ Step:  AIC=-325228.2
 Step:  AIC=-326628.8
 ## Lucro ~ Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq + MargemLucro
 
-...............Df Sum of Sq      RSS     AIC
+- ...............Df Sum of Sq      RSS     AIC
 - MargemLucro   1         0        0 -326631
 - <none>                             0 -326629
 - VendasBrutas  1         0        0 -325086
@@ -85,7 +85,7 @@ Step:  AIC=-326628.8
 Step:  AIC=-326630.8
 ## Lucro ~ Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq
 
-...............Df Sum of Sq      RSS     AIC
+- ...............Df Sum of Sq      RSS     AIC
 - <none>                             0 -326631
 - VendasBrutas  1         0        0 -325088
 - Desc          1         0        0 -318260
