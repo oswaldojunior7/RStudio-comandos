@@ -4,18 +4,18 @@
 ## > dados<-read.delim("clipboard")
 ## > str(dados)
 'data.frame':	6098 obs. of  10 variables:
- $ Unidades    : int  457 70 97 41 297 76 57 580 312 173 ...
- $ PrecoUN     : num  5.11 5.56 2.41 3.86 3.57 2.65 2.27 3.59 3.91 4.35 ...
- $ Desc        : num  19.27 3.14 9.9 3.85 14.29 ...
- $ VendasBrutas: num  2335 389 234 158 1060 ...
- $ InvestMKT   : num  245.2 56.1 26.3 14.4 105.8 ...
- $ CustoProdt  : num  1131.8 206.6 139.2 98.5 541 ...
- $ CustLogistic: num  123.3 38.4 16.4 11.7 43.8 ...
- $ ReceitaLiq  : num  1885 377 211 152 909 ...
- $ Lucro       : num  385 75.9 28.7 27.5 218.2 ...
- $ MargemLucro : num  20.4 20.1 13.6 18.1 24 ...
+$ Unidades    : int  457 70 97 41 297 76 57 580 312 173 ...
+$ PrecoUN     : num  5.11 5.56 2.41 3.86 3.57 2.65 2.27 3.59 3.91 4.35 ...
+$ Desc        : num  19.27 3.14 9.9 3.85 14.29 ...
+$ VendasBrutas: num  2335 389 234 158 1060 ...
+$ InvestMKT   : num  245.2 56.1 26.3 14.4 105.8 ...
+$ CustoProdt  : num  1131.8 206.6 139.2 98.5 541 ...
+$ CustLogistic: num  123.3 38.4 16.4 11.7 43.8 ...
+$ ReceitaLiq  : num  1885 377 211 152 909 ...
+$ Lucro       : num  385 75.9 28.7 27.5 218.2 ...
+$ MargemLucro : num  20.4 20.1 13.6 18.1 24 ...
 ## > cor(dados)
-                Unidades     PrecoUN        Desc VendasBrutas   InvestMKT
+................Unidades     PrecoUN        Desc VendasBrutas   InvestMKT
 Unidades      1.00000000 -0.03975714  0.44567732    0.8390871  0.60449686
 PrecoUN      -0.03975714  1.00000000 -0.03841668    0.3584145  0.39693513
 Desc          0.44567732 -0.03841668  1.00000000    0.3755233  0.33436343
@@ -26,7 +26,7 @@ CustLogistic  0.72826356  0.47023744  0.24392937    0.9432011  0.77013881
 ReceitaLiq    0.83105912  0.36924789  0.32507046    0.9965948  0.76803096
 Lucro         0.79734438  0.24698334  0.28520150    0.8969998  0.51475603
 MargemLucro   0.36503367 -0.09746546  0.13714648    0.2813321 -0.04315004
-             CustoProdt CustLogistic ReceitaLiq     Lucro MargemLucro
+.............CustoProdt CustLogistic ReceitaLiq     Lucro MargemLucro
 Unidades      0.8134175    0.7282636  0.8310591 0.7973444  0.36503367
 PrecoUN       0.3752622    0.4702374  0.3692479 0.2469833 -0.09746546
 Desc          0.3179461    0.2439294  0.3250705 0.2852015  0.13714648
@@ -43,7 +43,7 @@ MargemLucro   0.2131004    0.1832801  0.2849339 0.5207455  1.00000000
 Start:  AIC=-323631.6
 ## Lucro ~ Unidades + PrecoUN + Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq + MargemLucro
 
-               Df Sum of Sq      RSS     AIC
+...............Df Sum of Sq      RSS     AIC
 - PrecoUN       1         0        0 -325228
 - MargemLucro   1         0        0 -323633
 <none>                             0 -323632
@@ -58,7 +58,7 @@ Start:  AIC=-323631.6
 Step:  AIC=-325228.2
 ## Lucro ~ Unidades + Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq + MargemLucro
 
-               Df Sum of Sq      RSS     AIC
+...............Df Sum of Sq      RSS     AIC
 - Unidades      1         0        0 -326629
 - MargemLucro   1         0        0 -325230
 <none>                             0 -325228
@@ -72,7 +72,7 @@ Step:  AIC=-325228.2
 Step:  AIC=-326628.8
 ## Lucro ~ Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq + MargemLucro
 
-               Df Sum of Sq      RSS     AIC
+...............Df Sum of Sq      RSS     AIC
 - MargemLucro   1         0        0 -326631
 <none>                             0 -326629
 - VendasBrutas  1         0        0 -325086
@@ -85,7 +85,7 @@ Step:  AIC=-326628.8
 Step:  AIC=-326630.8
 ## Lucro ~ Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq
 
-               Df Sum of Sq      RSS     AIC
+...............Df Sum of Sq      RSS     AIC
 <none>                             0 -326631
 - VendasBrutas  1         0        0 -325088
 - Desc          1         0        0 -318260
@@ -98,10 +98,10 @@ Step:  AIC=-326630.8
 ## lm(formula = Lucro ~ Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq, data = dados)
 
 Coefficients:
- (Intercept)          Desc  VendasBrutas     InvestMKT    CustoProdt  CustLogistic  
-  -3.823e-12     1.148e-13    -3.381e-16    -1.000e+00    -1.000e+00    -1.000e+00  
-  ReceitaLiq  
-   1.000e+00  
+(Intercept)          Desc  VendasBrutas     InvestMKT    CustoProdt  CustLogistic  
+-3.823e-12     1.148e-13    -3.381e-16    -1.000e+00    -1.000e+00    -1.000e+00  
+ReceitaLiq  
+1.000e+00  
 
 Mensagens de aviso:
 1: tentar selecionar um modelo sobre um ajuste essencialmente perfeito não faz sentido 
