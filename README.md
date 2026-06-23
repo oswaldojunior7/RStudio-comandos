@@ -1,9 +1,9 @@
 ## RStudio Saída de Comandos - Atividade 4
-## Prof. Dr. Emerson Gomes dos Santos
-## Alunos: Ayrton / Oswaldo / Rômulo
+### Prof. Dr. Emerson Gomes dos Santos
+### Alunos: Ayrton / Oswaldo / Rômulo
 
-## > dados<-read.delim("clipboard")
-## > str(dados)
+### > dados<-read.delim("clipboard")
+### > str(dados)
 'data.frame':	6098 obs. of  10 variables:
 - Unidades    : int  457 70 97 41 297 76 57 580 312 173 ...
 - PrecoUN     : num  5.11 5.56 2.41 3.86 3.57 2.65 2.27 3.59 3.91 4.35 ...
@@ -15,7 +15,7 @@
 - ReceitaLiq  : num  1885 377 211 152 909 ...
 - Lucro       : num  385 75.9 28.7 27.5 218.2 ...
 - MargemLucro : num  20.4 20.1 13.6 18.1 24 ...
-## > cor(dados)
+### > cor(dados)
 - ................Unidades     PrecoUN        Desc VendasBrutas   InvestMKT
 - Unidades      1.00000000 -0.03975714  0.44567732    0.8390871  0.60449686
 - PrecoUN      -0.03975714  1.00000000 -0.03841668    0.3584145  0.39693513
@@ -38,11 +38,11 @@
 - ReceitaLiq    0.9900401    0.9529552  1.0000000 0.9042846  0.28493387
 - Lucro         0.8465668    0.8069928  0.9042846 1.0000000  0.52074547
 - MargemLucro   0.2131004    0.1832801  0.2849339 0.5207455  1.00000000
-## > nulo = lm(Lucro~1,data=dados)
-## > completo = lm(Lucro~.,data=dados)
-## > step(completo, data=dados, direction="backward") # mostra etapas
+### > nulo = lm(Lucro~1,data=dados)
+### > completo = lm(Lucro~.,data=dados)
+### > step(completo, data=dados, direction="backward") # mostra etapas
 Start:  AIC=-323631.6
-## Lucro ~ Unidades + PrecoUN + Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq + MargemLucro
+### Lucro ~ Unidades + PrecoUN + Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq + MargemLucro
 
 - ...............Df Sum of Sq      RSS     AIC
 - PrecoUN       1         0        0 -325228
@@ -57,7 +57,7 @@ Start:  AIC=-323631.6
 - CustoProdt    1  25480199 25480199   50861
 
 Step:  AIC=-325228.2
-## Lucro ~ Unidades + Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq + MargemLucro
+### Lucro ~ Unidades + Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq + MargemLucro
 
 - ...............Df Sum of Sq      RSS     AIC
 - Unidades      1         0        0 -326629
@@ -71,7 +71,7 @@ Step:  AIC=-325228.2
 - CustoProdt    1  25632431 25632431   50896
 
 Step:  AIC=-326628.8
-## Lucro ~ Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq + MargemLucro
+### Lucro ~ Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq + MargemLucro
 
 - ...............Df Sum of Sq      RSS     AIC
 - MargemLucro   1         0        0 -326631
@@ -84,7 +84,7 @@ Step:  AIC=-326628.8
 - CustoProdt    1  25659350 25659350   50900
 
 Step:  AIC=-326630.8
-## Lucro ~ Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq
+### Lucro ~ Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq
 
 - ...............Df Sum of Sq      RSS     AIC
 - <none>                             0 -326631
@@ -95,8 +95,8 @@ Step:  AIC=-326630.8
 - InvestMKT     1  18390811 18390811   48867
 - CustoProdt    1  33646777 33646777   52551
 
-## Call:
-## lm(formula = Lucro ~ Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq, data = dados)
+### Call:
+### lm(formula = Lucro ~ Desc + VendasBrutas + InvestMKT + CustoProdt + CustLogistic + ReceitaLiq, data = dados)
 
 Coefficients:
 (Intercept)          Desc  VendasBrutas     InvestMKT    CustoProdt  CustLogistic  
