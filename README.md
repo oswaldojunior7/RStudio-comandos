@@ -1,5 +1,6 @@
-## RStudio-comandos
 ## RStudio Saída de Comandos - Atividade 4
+## Prof. Dr. Emerson Gomes dos Santos
+## Alunos: Ayrton / Oswaldo / Rômulo
 
 ## > dados<-read.delim("clipboard")
 ## > str(dados)
