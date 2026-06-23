@@ -1,0 +1,31 @@
+# ─── Instalação e Carregamento das Bibliotecas ─────────────────────
+# Caso não tenha instalado, descomente as duas linhas abaixo:
+# install.packages("ggplot2")
+# install.packages("ggcorrplot")
+
+library(ggplot2)
+library(ggcorrplot)
+
+# ─── Chart 3: Correlation Heatmap ─────────────────────────────────
+# 1. Definir o vetor de colunas no formato R
+num_cols <- c('Unidades', 'PrecoUN', 'Desc', 'VendasBrutas', 'InvestMKT', 'MargemLucro', 'CustLogistic', 'ReceitaLiq', 'Lucro')
+
+# 2. Calcular a matriz de correlação (removendo valores nulos se houver)
+corr <- cor(dados[, num_cols], use = "complete.obs")
+
+# 3. Gerar o gráfico de mapa de calor (Heatmap)
+ggcorrplot(corr, 
+           hc.order = FALSE,           
+           type = "lower",             
+           lab = TRUE,                 
+           lab_size = 2.8,               # <-- DIMINUÍDO AQUI (Antes era 4)
+           colors = c("#d73027", "#ffffbf", "#1a9850"), 
+           title = "Feature Correlation Heatmap",
+           ggtheme = theme_minimal()) +
+  theme(
+    plot.title = element_text(size = 15, face = "bold", hjust = 0.5),
+    panel.grid.major = element_blank(),
+    axis.text.x = element_text(angle = 45, vmin = 1, hjust = 1) # Melhora a rotação dos nomes abaixo
+  )
+# 4. Exibir o insight no console
+cat("📌 Insight: Discount_Pct has a NEGATIVE correlation with Profit_Margin_Pct — more discount = lower margin!\n")
